@@ -1,0 +1,240 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Invitación Cumpleaños</title>
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <!-- Animate -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <!-- SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- html2canvas -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+        <!-- jsPDF -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+
+        <div class="music-notes">
+            <span>🎵</span>
+            <span>🎶</span>
+            <span>🎵</span>
+            <span>🎶</span>
+        </div>
+
+        <div class="container">
+
+            <div class="invitation-card" id="invitationCard">
+
+                <!-- GLOBOS -->
+                <div class="balloons">
+                    <div class="balloon blue"></div>
+                    <div class="balloon yellow"></div>
+                    <div class="balloon red"></div>
+                    <div class="balloon blue right"></div>
+                </div>
+
+                <!-- TITULO -->
+                <div class="header">
+
+                    <h3 class="mini-title animate__animated animate__bounceIn">
+                        ¡TE INVITO A MI
+                    </h3>
+
+                    <h1
+                        class="main-title animate__animated animate__pulse animate__infinite">
+
+                        <span class="r">C</span>
+                        <span class="o">U</span>
+                        <span class="y">M</span>
+                        <span class="g">P</span>
+                        <span class="c">L</span>
+                        <span class="b">E</span>
+                        <span class="p">A</span>
+                        <span class="pk">Ñ</span>
+                        <span class="r">O</span>
+                        <span class="o">S</span>
+
+                    </h1>
+
+                    <div class="age-badge">
+                        ¡CUMPLO <span>1</span> AÑITO!
+                    </div>
+
+                    <p class="description">
+                        Será un día lleno de música, juegos y muchas sorpresas.
+                    </p>
+
+                    <h2 class="alert-title">
+                        ¡NO FALTES!
+                    </h2>
+
+                </div>
+
+                <!-- TARJETA INFO -->
+                <div class="info-box">
+
+                    <div class="info-item">
+
+                        <div class="icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <h4>FECHA</h4>
+
+                        <p class="big">25</p>
+                        <p>MAYO 2026</p>
+
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="info-item">
+
+                        <div class="icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <h4>HORA</h4>
+
+                        <p class="big">3:00</p>
+                        <p>P.M.</p>
+
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="info-item">
+
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <h4>DIRECCIÓN</h4>
+
+                        <p>Calle de la Alegria 123</p>
+
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="info-item">
+
+                        <div class="icon">
+                            <i class="fa-solid fa fa-home"></i>
+                        </div>
+
+                        <h4>LUGAR</h4>
+
+                        <p>Salon de Fiestas</p>
+                        <p>Plim Plim</p>
+
+                    </div>
+
+                </div>
+
+                <!-- COUNTDOWN -->
+                <div class="countdown-container">
+
+                    <h3>⏳ FALTAN ⏳</h3>
+
+                    <div class="countdown">
+
+                        <div class="time-box">
+                            <span id="days">00</span>
+                            <p>Días</p>
+                        </div>
+
+                        <div class="time-box">
+                            <span id="hours">00</span>
+                            <p>Horas</p>
+                        </div>
+
+                        <div class="time-box">
+                            <span id="minutes">00</span>
+                            <p>Min</p>
+                        </div>
+
+                        <div class="time-box">
+                            <span id="seconds">00</span>
+                            <p>Seg</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PERSONAJE -->
+                <div class="scene-container">
+
+                    <!-- FONDO -->
+                    <img
+                        src="./images/bg-plim-plim.png"
+                        class="background-scene">
+
+                    <!-- AUTO -->
+                    <img
+                        src="./images/plim-plim.png"
+                        class="car-image animate__animated animate__bounce animate__infinite">
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <div class="confirmation-box">
+
+                <h3>¿Nos acompañan? 🥰</h3>
+
+                <div class="input-group">
+                    <input type="text"
+                        id="guestName"
+                        placeholder="Tu nombre o familia">
+                </div>
+
+                <div class="input-group">
+                    <input type="number"
+                        id="guestCount"
+                        placeholder="¿Cuántos son?"
+                        min="1">
+                </div>
+
+                <button class="confirm-btn" onclick="confirmAttendance()">
+                    CONFIRMAR ASISTENCIA
+                </button>
+
+                <button class="download-btn" onclick="downloadInvitation()">
+                    DESCARGAR INVITACIÓN
+                </button>
+
+            </div>
+
+        </div>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+
+</html>
