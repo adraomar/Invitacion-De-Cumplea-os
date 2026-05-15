@@ -97,7 +97,7 @@ function confirmAttendance() {
     // URL WHATSAPP
 
     const url =
-        `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     // ALERTA
 
@@ -113,7 +113,7 @@ function confirmAttendance() {
 
     setTimeout(() => {
 
-        window.open(url, "_blank");
+        window.location.href = url;
 
     }, 1500);
 }
